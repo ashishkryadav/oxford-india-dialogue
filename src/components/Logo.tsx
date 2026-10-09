@@ -1,11 +1,5 @@
 import { useId } from "react";
-
-// 24 Ashoka Chakra spokes radiating from the dome's hub.
-const SPOKES = Array.from({ length: 24 }, (_, i) => {
-  const a = (i * 15 * Math.PI) / 180;
-  const pt = (r: number) => `${(60 + Math.cos(a) * r).toFixed(2)} ${(56 + Math.sin(a) * r).toFixed(2)}`;
-  return `M${pt(6.8)}L${pt(30.6)}`;
-}).join("");
+import { SPOKES } from "@/lib/logo";
 
 /** Radcliffe Camera emblem whose dome doubles as the Ashoka Chakra. Inherits `color`. */
 export function LogoMark({ size = 46, className }: { size?: number; className?: string }) {
