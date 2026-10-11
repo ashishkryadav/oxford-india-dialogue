@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { EB_Garamond, Instrument_Sans } from "next/font/google";
-import Nav from "@/components/Nav";
-import Footer from "@/components/Footer";
 import "./globals.css";
 
 const garamond = EB_Garamond({
@@ -46,11 +44,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${garamond.variable} ${instrumentSans.variable}`}>
-      <body>
-        <Nav />
-        <main>{children}</main>
-        <Footer />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
